@@ -4,12 +4,20 @@
 
 **DARTA** has a two-layer mechanism for ensuring the quality and value of the data on the platform. The first layer is a social credit system, which records the credentials of data providers and helps to establish their trustworthiness. The second layer is a data appraisal system, which uses various statistical metrics to provide insights on the value of the data.
 
+# TODO
+- data format 
+    - HL7 compatible?
+    - model format compatible?
+    
+- mechanism on marketplace on Ethereum/Scroll
+- data metrics for valuation on IPFS/FVM
+
 # Layer of trust on social credit
 - building the marketplace system 
     - record the transaction on chain
     - the value of data also related to the credential of providers
     - pricing mechanism 
-    
+
 # Layer of data-driven valuation on data
 - building the metrics and tools to value the data about
     - for requester
