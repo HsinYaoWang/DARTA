@@ -1,4 +1,4 @@
-# DARTA - A Trustless, Permissionless Biomarker Data Marketplace
+# DARTA - A Permissionless Biomarker Data Marketplace
 
 **DARTA** is a web3 project that aims to build a marketplace for data related to biomarkers, laboratory test result. It is designed to be trustless and permissionless, allowing anyone to contribute data and organizations to access it for research or AI model training.
 
@@ -6,11 +6,15 @@
 
 # TODO
 - data format 
-    - HL7 compatible?
+    - HL7 compatible? based R library "lab" developed by Prof. Tseng
     - model format compatible?
-    
-- mechanism on marketplace on Ethereum/Scroll
 - data metrics for valuation on IPFS/FVM
+    - degree of rarity, suggesting exclusive/non-exclusive licensing
+    - demographic stats
+    - models performances in different folds, with different data size (R caret, Python ScikitLearn/Pytorch, TensorFlow, etc.)
+    - data shift theory
+- mechanism on marketplace on Ethereum/Scroll
+
 
 # Layer of trust on social credit
 - building the marketplace system 
