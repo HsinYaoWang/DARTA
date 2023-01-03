@@ -33,6 +33,7 @@
         - what's the quality of data in term of model training
 
 
+
 By contributing data to DARTA, you can earn economic incentives and contribute to research progress. Organizations can use the platform to access high-quality data and advance their research efforts.
 
 We welcome contributions and feedback from the community. If you are interested in collaborating or have ideas for improving DARTA, please don't hesitate to reach out.
