@@ -11,8 +11,11 @@
 - data metrics for valuation on IPFS/FVM
     - degree of rarity, suggesting exclusive/non-exclusive licensing
     - demographic stats
-    - models performances in different folds, with different data size (R caret, Python ScikitLearn/Pytorch, TensorFlow, etc.)
-    - data shift theory
+    - feature skewness / kurtosis
+    - data change over time
+    - data drift theory
+    - data heterogeneity checking: models performances in different folds 
+    - duplication checking: training data size impact on model performance (R caret, Python ScikitLearn/Pytorch, TensorFlow, etc.)
 - mechanism on marketplace on Ethereum/Scroll
 
 
