@@ -6,14 +6,17 @@
 
 # TODO
 - data format 
-    - HL7 compatible? based R library "lab" developed by Prof. Tseng
-    - model format compatible?
+    - [HL7 FHIR](https://hl7.org/fhir/) standard
+    - basic data format that fit the input for R library [lab](https://github.com/DHLab-TSENG/lab) developed by Prof. Tseng
+    - format for specific models
 - data metrics for valuation on IPFS/FVM
     - degree of rarity, suggesting exclusive/non-exclusive licensing
-    - demographic stats
-    - feature skewness / kurtosis
-    - data change over time
-    - data drift theory
+    - amount of data
+    - characteristics
+        - demographic stats
+        - feature skewness / kurtosis
+    - data characteristics over time
+    - data compatibility for sepcific models identified by data drift theory
     - data heterogeneity checking: models performances in different folds 
     - duplication checking: training data size impact on model performance (R caret, Python ScikitLearn/Pytorch, TensorFlow, etc.)
 - mechanism on marketplace on Ethereum/Scroll
