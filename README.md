@@ -7,17 +7,20 @@
 # TODO
 - data format 
     - [HL7 FHIR](https://hl7.org/fhir/) standard
-    - basic data format that fit the input for R library [lab](https://github.com/DHLab-TSENG/lab) developed by Prof. Tseng
+    - basic lab data format that fit the input for R library [lab](https://github.com/DHLab-TSENG/lab) developed by Prof. Tseng
     - format for specific models
 - data metrics for valuation on IPFS/FVM
     - degree of rarity, suggesting exclusive/non-exclusive licensing
+    - data usability, sharing data directly or contribution model development be federated learning
     - amount of data
     - characteristics
         - demographic stats
         - feature skewness / kurtosis
-    - data characteristics over time
+    - data characteristics change over time
     - data compatibility for sepcific models identified by data drift theory
-    - data heterogeneity checking: models performances in different folds 
+    - data heterogeneity checking
+        - models performances in different folds
+        - cluster analysis for outliers detection
     - duplication checking: training data size impact on model performance (R caret, Python ScikitLearn/Pytorch, TensorFlow, etc.)
 - mechanism on marketplace on Ethereum/Scroll
 
