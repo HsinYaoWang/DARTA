@@ -8,7 +8,7 @@
 - data format 
     - [HL7 FHIR](https://hl7.org/fhir/) standard
     - basic lab data format that fit the input for R library [lab](https://github.com/DHLab-TSENG/lab) developed by Prof. Tseng
-    - format for specific models
+    - analysis-ready data format
 - data metrics for valuation on IPFS/FVM
     - degree of rarity, suggesting exclusive/non-exclusive licensing
     - data usability, sharing data directly or contribution model development be federated learning
