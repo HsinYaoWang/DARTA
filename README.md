@@ -19,6 +19,7 @@
     - data characteristics change over time
     - data compatibility for sepcific models identified by data drift theory
     - data heterogeneity checking
+        - data characteristics in different folds
         - models performances in different folds
         - cluster analysis for outliers detection
     - duplication checking: training data size impact on model performance (R caret, Python ScikitLearn/Pytorch, TensorFlow, etc.)
