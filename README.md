@@ -43,10 +43,10 @@ The 3rd layer focuses on creating various mechanisms to better match data provid
         - what's the new information contributing from the data?
         - what's the quality of data in term of model training?
     - mechanism on marketplace on Ethereum/Scroll
-        - Whole dataset with appraisal report, and models, are licensed to the requesters
-        - Whole dataset with appraisal report is licensed to the requesters
-        - Model licensed to the requesters
-        - Semi-contributor: the requsters upload their data to integrate into exisiting providers' data to have fine-tuned federated learning models
+        - whole dataset with appraisal report, and models, are licensed to the requesters
+        - whole dataset with appraisal report is licensed to the requesters
+        - model licensed to the requesters
+        - semi-contributor: the requsters upload their data to integrate into exisiting providers' data to have fine-tuned federated learning models
  
 By contributing data to DARTA, you can earn economic incentives and contribute to research progress. Organizations can use the platform to access high-quality data and advance their research efforts.
 
