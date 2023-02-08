@@ -1,10 +1,10 @@
-Data-driven valuation on MALDI-TOF MS data of S. aerus
+Data-driven valuation on MALDI-TOF MS data of S. aureus
 ================
 
 This is an example of [the second layer of
 DARTA](https://github.com/HsinYaoWang/DARTA#layer-of-data-driven-valuation-on-data),
 **Layer of data-driven valuation on data**, with MALDI-TOF MS data of
-S.aerus.
+S. aureus.
 
 ## Data format
 
@@ -45,7 +45,7 @@ columns).
 
 1.  Is there any publicly available dataset similar with the submitted
     data? (Yes/No)
-    - No. There is no publicly available MALDI-TOF MS data of S.aerus
+    - No. There is no publicly available MALDI-TOF MS data of S. aureus
 2.  Licensing option. (exclusive/non-exclusive)
     - Non-exclusive
 
