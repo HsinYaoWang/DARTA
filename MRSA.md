@@ -1,4 +1,4 @@
-Data-driven valuation on MALDI-TOF MS data of S.aerus
+Data-driven valuation on MALDI-TOF MS data of S. aerus
 ================
 
 This is an example of [the second layer of
