@@ -23,7 +23,7 @@ name), date, test results.
 ### Analysis-ready data format
 
 Analysis-ready data is composed of rows representing records, each with
-a unique ID and all variables arranged in columns (showing only part of
+an unique ID and all variables arranged in columns (showing only part of
 columns).
 
 | 2000.10055247 | 2582.4357238000052 | 3143.8104086700328 | 3951.1877523200333 | 5150.225256870018 | 6385.8788357600015 | 7577.816246340053 | MRSA | SPC | RCV.DATE   | GENDER |  AGE |
