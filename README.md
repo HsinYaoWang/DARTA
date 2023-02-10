@@ -47,6 +47,9 @@ The 3rd layer focuses on creating various mechanisms to better match data provid
         - whole dataset with appraisal report is licensed to the requesters
         - model licensed to the requesters
         - semi-contributor: the requsters upload their data to integrate into exisiting providers' data to have fine-tuned federated learning models
+    - examples:
+        - [urinalysis data](https://github.com/HsinYaoWang/DARTA/blob/main/urinalysis.md)
+        - [MALDI-TOF MS data of S. aureus](https://github.com/HsinYaoWang/DARTA/blob/main/MRSA.md)
  
 By contributing data to DARTA, you can earn economic incentives and contribute to research progress. Organizations can use the platform to access high-quality data and advance their research efforts.
 
