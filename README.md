@@ -1,5 +1,7 @@
 # DARTA - A Permissionless Biomarker Data Marketplace
 
+**DARTA** is a decentralized marketplace designed for biomedical AI researchers and diagnostic companies to access high-quality, well-characterized biomarker datasets, while enabling data providers to be fairly compensated through transparent, trust-minimized mechanisms.
+
 **DARTA**  is a web3 project that aims to build an accurate, valuation-based marketplace for biometric/clinical laboratory test data. It is designed to be a blockchain-based trusted and permissionless marketplace. Data with DARTA's precise valuation and robust transaction mechanism can be better transferred and used from data providers to requesters in developing useful AI models.
 
 **DARTA** has a three-layer mechanism for ensuring the quality and value of the data on the platform. 
@@ -33,7 +35,7 @@ The 3rd layer focuses on creating various mechanisms to better match data provid
         - cluster analysis for outliers detection
     - duplication checking: training data size impact on model performance (R caret, Python ScikitLearn/Pytorch, TensorFlow, etc.)
 
-# Layer of Data-driven Appraisal on Data
+# Match data providers and requesters on chain
 - building the metrics and tools to value the data about
     - for requesters
         - what's the quantity and quality need for certain model application?
