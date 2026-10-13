@@ -1,58 +1,77 @@
-# DARTA - A Permissionless Biomarker Data Marketplace
+![DARTA — authorized data, useful models, shared value](assets/darta-banner.svg)
 
-**DARTA** is a decentralized marketplace designed for biomedical AI researchers and diagnostic companies to access high-quality, well-characterized biomarker datasets, while enabling data providers to be fairly compensated through transparent, trust-minimized mechanisms.
+# DARTA
 
-**DARTA**  is a web3 project that aims to build an accurate, valuation-based marketplace for biometric/clinical laboratory test data. It is designed to be a blockchain-based trusted and permissionless marketplace. Data with DARTA's precise valuation and robust transaction mechanism can be better transferred and used from data providers to requesters in developing useful AI models.
+**Build useful models. Share the value with data contributors.**
 
-**DARTA** has a three-layer mechanism for ensuring the quality and value of the data on the platform. 
-The 1st layer is a social credit system that records the credentials of data providers and helps establish their trustworthiness. 
-The 2nd layer is a data valuation system that uses various statistical metrics to provide insight into the value of the data.
-The 3rd layer focuses on creating various mechanisms to better match data providers and requesters.
+DARTA is building a marketplace for authorized biomedical data use, model development, and shared returns. Our purpose is to help teams build with valuable data and enable data contributors to share in the value those models create under clear, agreed terms.
 
-# Layer of Trust on Social Credit
-- building the marketplace system 
-    - record the transaction on chain
-    - the value of data also related to the credential of providers
-    - pricing mechanism 
+**[Explore the demo walkthrough](docs/walkthrough.md) · [Discuss a project](docs/collaborate.md) · [繁體中文](README.zh-TW.md)**
 
-# Data Health Check-up
-- data format 
-    - [HL7 FHIR](https://hl7.org/fhir/) standard
-    - basic lab data format that fit the input for R library [lab](https://github.com/DHLab-TSENG/lab) developed by Prof. Tseng
-    - analysis-ready data format
-- data metrics for valuation on IPFS/FVM
-    - degree of rarity, suggesting exclusive/non-exclusive licensing
-    - data usability, sharing data directly or contribution model development be federated learning
-    - amount of data, missing percentage
-    - characteristics
-        - demographic stats
-        - feature skewness / kurtosis
-    - data characteristics change over time
-    - data compatibility for sepcific models identified by data drift theory
-    - data heterogeneity checking
-        - data characteristics in different folds
-        - models performances in different folds
-        - cluster analysis for outliers detection
-    - duplication checking: training data size impact on model performance (R caret, Python ScikitLearn/Pytorch, TensorFlow, etc.)
+> **Available today:** a working local demonstration with synthetic data and simulated USDC. Explore the workflow and discuss how it could fit your team.
 
-# Match data providers and requesters on chain
-- building the metrics and tools to value the data about
-    - for requesters
-        - what's the quantity and quality need for certain model application?
-        - how to price the data by its value from model training perspective?
-    - for data providers
-        - what's the data value for individual model?
-        - what's the new information contributing from the data?
-        - what's the quality of data in term of model training?
-    - mechanism on marketplace on Ethereum/Scroll
-        - whole dataset with appraisal report, and models, are licensed to the requesters
-        - whole dataset with appraisal report is licensed to the requesters
-        - model licensed to the requesters
-        - semi-contributor: the requsters upload their data to integrate into exisiting providers' data to have fine-tuned federated learning models
-    - examples:
-        - [urinalysis data](https://github.com/HsinYaoWang/DARTA/blob/main/urinalysis.md)
-        - [MALDI-TOF MS data of S. aureus](https://github.com/HsinYaoWang/DARTA/blob/main/MRSA.md)
- 
-By contributing data to DARTA, you can earn economic incentives and contribute to research progress. Organizations can use the platform to access high-quality data and advance their research efforts.
+## Who we are building for
 
-We welcome contributions and feedback from the community. If you are interested in collaborating or have ideas for improving DARTA, please don't hesitate to reach out.
+| Your role | What DARTA is designed to help you do |
+|---|---|
+| **Data contributors** — hospitals, laboratories, research groups | Define authorized uses, connect your contribution to released models, and understand your agreed earnings. |
+| **Model developers** — researchers, diagnostics and biotech teams | Agree data-use rights, train and evaluate models, and establish how contributors share qualifying model revenue. |
+| **Teams commissioning model work** | Start with a research question and discuss a scoped project covering suitable authorized data, standard training, and an evaluation report. |
+
+Start with your scientific and business needs. Discuss the use case, permissions, deliverables, and costs in plain language.
+
+## Two ways data contributors can participate
+
+**Training-data use.** Agree a price and a defined use of your data for model work.
+
+**Downstream model revenue.** Agree a share of qualifying model revenue, linked to the specific model version and its recorded contributors.
+
+These are separate revenue streams. Prices, rights, allocation rules, and qualifying revenue are agreed for each project.
+
+![Synthetic seller view showing training-data earnings and a separately calculated model-use revenue share](assets/demo-seller.png)
+
+*Local synthetic demo: fictional contributors and illustrative sharing terms. All earnings are simulated USDC recorded off-chain.*
+
+## From a research question to shared value
+
+1. **Describe the goal.** Agree the intended use, scope, deliverables, and evaluation plan.
+2. **Authorize the work.** Identify suitable, licensable data and record the agreed permissions and costs.
+3. **Train and evaluate.** Run an approved standard task and review the report before approving the model release.
+4. **Connect the contributors.** Record which data versions support that model and the agreed revenue-sharing rule.
+5. **Use and reconcile.** Account for completed, authorized model use and allocate the agreed shares.
+
+The product direction is controlled data use without raw-data downloads to buyers, with seller-controlled storage as the preferred architecture. The current synthetic demo runs locally; seller-side execution is still to be implemented.
+
+## See the workflow in action
+
+The [guided walkthrough](docs/walkthrough.md) follows a fictional biomedical research project from request to seller earnings:
+
+- A buyer defines the project and applies a startup-fee credit.
+- Two fictional contributors authorize synthetic data for a standard training task.
+- An actual small classifier is trained and evaluated on synthetic records.
+- A model-use batch reserves funds, settles completed items, and releases unused funds.
+- Each contributor can inspect their own earnings and the calculation behind them.
+
+The demonstration includes a partial-failure scenario and repeated-request handling: failed items are not charged, and replaying the same request does not create another charge.
+
+**[Walk through the buyer and seller views →](docs/walkthrough.md)**
+
+## Current availability
+
+| Area | Availability |
+|---|---|
+| **Working demonstration** | Source review, authorization, synthetic training and evaluation, model/source records, startup-fee credit, hosted batch accounting, and contributor allocations. |
+| **Payment status** | Simulated USDC in an off-chain internal ledger. Real payments are not enabled. |
+| **Deployment status** | Local demonstration. Institutional authentication, seller-controlled execution, payment integration, and production security remain to be built and validated. |
+
+The demonstration uses fictional parties and synthetic data. It does not represent a customer transaction or clinical validation. Real cooperation requires agreed rights, privacy, security, and commercial arrangements.
+
+## Let's discuss your use case
+
+Tell us **what you want to build**, **what authorized data you can contribute**, or **which part of the workflow matters to your team**.
+
+Start with your role, a non-confidential use case, the broad data type, and the outcome you want to explore. The [collaboration guide](docs/collaborate.md) explains what to share and answers common questions.
+
+**[Start a collaboration conversation →](https://github.com/HsinYaoWang/DARTA/issues/new?template=collaboration.yml)**
+
+GitHub issues are public. Please do not post datasets, patient information, credentials, or confidential contracts.
