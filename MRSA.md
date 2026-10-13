@@ -8,7 +8,7 @@ A team wants to develop a model using MALDI-TOF measurements of *S. aureus* and 
 
 DARTA's planned review service brings those questions into the purchasing conversation. Sellers can explain their data's strengths and limitations; buyers can agree a suitable scope of authorized use before committing a larger budget.
 
-> **Illustrative assessment demo:** All counts and proportions below are invented for this example. They are not results from the historical MRSA dataset, an available data listing, or a completed clinical study. This page demonstrates the intended report and decision process; a production MRSA assessment service is not deployed.
+> **Synthetic assessment demo:** The quality-review funnel and quantity-planning calculations are hypothetical. Section 4 adds measured results from actual training on newly generated synthetic data. Neither uses the historical MRSA dataset or represents an available listing, clinical study or deployed production assessment service.
 
 ## 1. Review quality and fit
 
@@ -48,13 +48,26 @@ This estimate assumes the same class mix and retention rate in the selected pool
 
 ## 4. Decide whether more data would help
 
-For an agreed model-development study, compare increasing training subsets while keeping the evaluation protocol fixed and related records in the same split. Use a learning curve, uncertainty, error/calibration measures and source/subgroup results to assess the next purchase. Reserve the final test set from repeated purchasing decisions.
+We actually trained a generic demonstration model at **100, 250, 500, 1,000, 2,000 and 4,000 training records**, with 10 predetermined subset orderings at each size. Every run was evaluated on the same separate 1,000-record development-validation cohort. Another 1,000 generated records were reserved for final testing and were not evaluated.
 
-- **Performance still improves:** assess a larger authorized training cohort within budget.
-- **A source or subgroup remains weak:** seek data that address that gap.
-- **Gains flatten or uncertainty remains large:** examine labels, coverage and the model before expanding the order.
+![Measured synthetic learning curves: mean AUROC rises from 0.842 to 0.918 and mean Brier error falls from 0.120 to 0.079 as training grows from 100 to 4,000 records. Bands show observed ranges, not confidence intervals.](assets/mrsa-learning-curve-en.png)
 
-This example reports no measured learning curve or model performance. Data quantity and quality alone do not establish clinical validity or guarantee a useful model.
+*Actual measurements on generated data. Lines are means; bands are observed minimum–maximum results across 10 training-subset orderings. They do not measure uncertainty from new validation cohorts or clinical populations. Inputs are generic random features, not patient records or actual MALDI-TOF spectra.*
+
+| Training records | Mean AUROC ↑ | AUROC range across runs | Mean Brier error ↓ |
+|---:|---:|---:|---:|
+| 100 | 0.8416 | 0.7850–0.8742 | 0.1203 |
+| 250 | 0.8797 | 0.8538–0.8977 | 0.1029 |
+| 500 | 0.8973 | 0.8826–0.9118 | 0.0914 |
+| 1,000 | 0.9110 | 0.9029–0.9185 | 0.0827 |
+| 2,000 | 0.9161 | 0.9131–0.9193 | 0.0798 |
+| 4,000 | 0.9179 | 0.9166–0.9190 | 0.0787 |
+
+**What changes for the buyer's decision?** In this simulation, increasing from 1,000 to 2,000 records adds about **0.0051 mean AUROC**. Increasing from 2,000 to 4,000 adds about **0.0019**, with mean Brier error improving by about **0.0011**; some paired runs worsen. The smaller average gain is a reason to compare the next batch's cost, coverage and uncertainty. It does not establish that 2,000 records are sufficient or optimal.
+
+The earlier 10,000 → 8,000 quality funnel was not measured in this experiment. Its screening yield cannot be used to turn this curve into a real order quantity. A real project needs verified usable counts, permitted uses, agreed costs and evaluation of its own data, source/subgroup coverage and goals. No count here is a minimum purchase recommendation or evidence of clinical validity.
+
+**[See the experiment scope, additional metrics and aggregate results →](docs/mrsa-learning-curve.md)**
 
 **The buyer's deliverable:** a versioned quality summary, usable-cohort counts, task-fit limitations and a scoped next step. A model-utility study, when commissioned, adds evidence for expanding or stopping. The buyer and seller still agree the price.
 
@@ -70,7 +83,7 @@ This example reports no measured learning curve or model performance. Data quant
 
 DARTA 規劃在買方決定採購範圍前，提供賣方資料的品質與適用性評估。讓賣方說明資料優勢與限制，也讓買方有依據地安排預算與資料使用授權。
 
-> **評估報告示範：** 以下數字與比例全部為虛構，沒有沿用歷史 MRSA 資料集的分析結果，也不代表可購買的商品或完成的臨床研究。目前呈現預定的報告與決策流程，正式 MRSA 評估服務尚未部署。
+> **合成評估展示：** 品質篩選流程與數量估算是情境假設；後段學習曲線則是全新合成資料實際訓練的量測結果。兩者都沒有使用歷史 MRSA 資料集，也不代表可購商品、臨床研究或已部署的正式評估服務。
 
 ### 買方會看見什麼
 
@@ -106,9 +119,26 @@ DARTA 規劃在買方決定採購範圍前，提供賣方資料的品質與適�
 
 ### 要不要再買，接著看什麼
 
-若委託模型效益評估，可在固定評估設計下比較不同訓練量，讓同一患者／檢體的相關紀錄留在同一切分，以學習曲線、不確定性、錯誤／校準與來源／子群表現，決定下一步。最終測試集保留到最後，避免反覆用它挑選採購方案。
+我們已實際比較 **100、250、500、1,000、2,000、4,000 筆訓練資料**，每種數量依事先固定的 10 組子集順序訓練。每次都使用另外固定的 **1,000 筆開發驗證資料**評估；另有 1,000 筆合成資料保留作最終測試，本次沒有評估它。
 
-仍持續改善時，評估擴大訓練授權；特定來源或子群不足時，補足缺口；增益趨緩或不確定性仍大時，先檢視標籤、涵蓋範圍與模型。本頁沒有宣稱已量測的學習曲線或模型效能，資料量與品質本身也不代表臨床有效性。
+![合成資料學習曲線：訓練量從 100 增至 4,000 筆，平均 AUROC 從 0.842 升至 0.918，平均 Brier 誤差從 0.120 降至 0.079。色帶為各次結果範圍，並非信賴區間。](assets/mrsa-learning-curve-zh-TW.png)
+
+*這是生成資料上的實測結果。實線為平均，色帶為 10 次訓練子集順序產生的最小至最大值，不涵蓋更換驗證組或真實臨床族群的不確定性。輸入是一般隨機特徵，不是患者紀錄或真實 MALDI-TOF 光譜。*
+
+| 訓練筆數 | 平均 AUROC ↑ | 各次 AUROC 範圍 | 平均 Brier 誤差 ↓ |
+|---:|---:|---:|---:|
+| 100 | 0.8416 | 0.7850–0.8742 | 0.1203 |
+| 250 | 0.8797 | 0.8538–0.8977 | 0.1029 |
+| 500 | 0.8973 | 0.8826–0.9118 | 0.0914 |
+| 1,000 | 0.9110 | 0.9029–0.9185 | 0.0827 |
+| 2,000 | 0.9161 | 0.9131–0.9193 | 0.0798 |
+| 4,000 | 0.9179 | 0.9166–0.9190 | 0.0787 |
+
+**這如何幫買方決策？** 這個模擬中，從 1,000 增至 2,000 筆，平均 AUROC 增加約 **0.0051**；從 2,000 增至 4,000 筆，平均再增加約 **0.0019**，平均 Brier 誤差改善約 **0.0011**，部分配對抽樣結果反而略降。新增資料的平均增益變小時，就應一起比較下一批的成本、涵蓋範圍與不確定性；不能據此宣稱 2,000 筆已足夠或最划算。
+
+前面的 10,000 → 8,000 品質篩選並非本次量測，不能把假設保留率套在這條曲線上換算真實訂單。正式專案須依賣方確認的可用數量、授權、報價，以及本案資料、來源／子群與研究目標的評估結果來決定。這裡沒有推薦最低採購筆數，也不代表臨床有效性。
+
+**[看實驗範圍、其他指標與彙總結果 →](docs/mrsa-learning-curve.md#繁體中文)**
 
 **買方得到的成果：** 有版本的品質摘要、可用資料數、適用性限制與下一步範圍；若另行委託模型效益研究，再以實測證據判斷擴大或停止。成交價仍由買賣雙方約定。
 

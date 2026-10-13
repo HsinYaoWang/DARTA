@@ -24,9 +24,9 @@ Start with your scientific and business needs. Discuss the use case, permissions
 
 DARTA's planned seller-data review helps buyers understand provenance, completeness, usable volume and fit for their research question before agreeing how much data use to license. Sellers gain a clear way to explain the strengths and limitations of their data.
 
-The **[MRSA assessment example](MRSA.md)** shows how a fictional pool of 10,000 records becomes 8,000 usable records, how class coverage affects an initial quantity estimate, and how a subsequent model study could guide expansion. All figures are illustrative; they are not results from an available dataset or evidence of a deployed assessment service.
+The **[MRSA assessment example](MRSA.md)** combines a hypothetical quality review with a **measured learning curve from 60 actual synthetic training runs**. Compare 100 to 4,000 training records and see how additional data changes performance. Synthetic results inform the demonstration, not real-world sample requirements or clinical validity; the production assessment service remains to be built.
 
-**[Explore the quality report and quantity calculation →](MRSA.md)**
+**[Explore the quality report and learning curve →](MRSA.md)**
 
 ## Two ways data contributors can participate
 
