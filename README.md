@@ -6,7 +6,7 @@
 
 DARTA is building a marketplace for authorized biomedical data use, model development, and shared returns. Our purpose is to help teams build with valuable data and enable data contributors to share in the value those models create under clear, agreed terms.
 
-**[Explore the demo walkthrough](docs/walkthrough.md) · [Discuss a project](docs/collaborate.md) · [繁體中文](README.zh-TW.md)**
+**[See the MRSA assessment example](MRSA.md) · [Explore the workflow demo](docs/walkthrough.md) · [Discuss a project](docs/collaborate.md) · [繁體中文](README.zh-TW.md)**
 
 > **Available today:** a working local demonstration with synthetic data and simulated USDC. Explore the workflow and discuss how it could fit your team.
 
@@ -19,6 +19,14 @@ DARTA is building a marketplace for authorized biomedical data use, model develo
 | **Teams commissioning model work** | Start with a research question and discuss a scoped project covering suitable authorized data, standard training, and an evaluation report. |
 
 Start with your scientific and business needs. Discuss the use case, permissions, deliverables, and costs in plain language.
+
+## Understand data quality before choosing your scope
+
+DARTA's planned seller-data review helps buyers understand provenance, completeness, usable volume and fit for their research question before agreeing how much data use to license. Sellers gain a clear way to explain the strengths and limitations of their data.
+
+The **[MRSA assessment example](MRSA.md)** shows how a fictional pool of 10,000 records becomes 8,000 usable records, how class coverage affects an initial quantity estimate, and how a subsequent model study could guide expansion. All figures are illustrative; they are not results from an available dataset or evidence of a deployed assessment service.
+
+**[Explore the quality report and quantity calculation →](MRSA.md)**
 
 ## Two ways data contributors can participate
 
@@ -35,7 +43,7 @@ These are separate revenue streams. Prices, rights, allocation rules, and qualif
 ## From a research question to shared value
 
 1. **Describe the goal.** Agree the intended use, scope, deliverables, and evaluation plan.
-2. **Authorize the work.** Identify suitable, licensable data and record the agreed permissions and costs.
+2. **Review and authorize.** Review data quality and task fit, agree the usable scope, and record permissions and costs.
 3. **Train and evaluate.** Run an approved standard task and review the report before approving the model release.
 4. **Connect the contributors.** Record which data versions support that model and the agreed revenue-sharing rule.
 5. **Use and reconcile.** Account for completed, authorized model use and allocate the agreed shares.
