@@ -1,0 +1,46 @@
+name: Collaboration / 合作需求
+description: Start a non-confidential conversation about your data or model use case. 以公開資訊討論合作方向。
+title: "[Collaboration] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us what you want to achieve. This is a **public enquiry**, not live onboarding or a service booking. Please do not upload datasets, patient information, private contracts or credentials. No email address is needed; we can continue through GitHub replies.
+
+        請簡述你希望達成的成果。這是**公開合作詢問**，不是正式進件或服務預約。請勿上傳資料集、患者資訊、私人合約或帳號憑證；不必留下 email，可透過 GitHub 回覆繼續討論。
+
+        [Collaboration brief / 合作說明](https://github.com/HsinYaoWang/DARTA/blob/main/docs/collaborate.md)
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your role / 你的角色
+      options:
+        - Data partner / 資料提供者
+        - Model developer or research team / 模型開發者或研究團隊
+        - Team seeking commissioned development / 希望委託開發的團隊
+        - Other / 其他
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Problem and desired outcome / 問題與希望取得的成果
+      description: A few non-confidential sentences are enough. 幾句不含機密的說明即可。
+      placeholder: What are you trying to do, and what would a useful outcome look like? 你想完成什麼？什麼成果對你有幫助？
+    validations:
+      required: true
+  - type: textarea
+    id: data-context
+    attributes:
+      label: Data type and approximate scale, if relevant / 資料類型與大約規模（選填）
+      description: Broad, non-confidential categories only; no records or attachments. 僅填可公開的概略類型，不放逐筆紀錄或附件。
+      placeholder: "For example: laboratory measurements, thousands of records. 例如：實驗室檢測數值，數千筆。"
+    validations:
+      required: false
+  - type: checkboxes
+    id: public-reminder
+    attributes:
+      label: Public enquiry reminder / 公開詢問提醒
+      options:
+        - label: I understand this issue is public and datasets, patient information, private contracts and credentials should not be included. 我知道這是公開 issue，不應放入資料集、患者資訊、私人合約或帳號憑證。
+          required: true
